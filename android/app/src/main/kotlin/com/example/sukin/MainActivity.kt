@@ -1,4 +1,4 @@
-package com.example.sukin
+package com.example.amazon
 
 import io.flutter.embedding.android.FlutterActivity
 

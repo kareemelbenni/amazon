@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
-project(sukin LANGUAGES CXX)
+project(amazon LANGUAGES CXX)
 
-set(BINARY_NAME "sukin")
+set(BINARY_NAME "amazon")
 
 cmake_policy(SET CMP0063 NEW)
 

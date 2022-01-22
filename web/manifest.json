@@ -1,6 +1,6 @@
 {
-    "name": "sukin",
-    "short_name": "sukin",
+    "name": "amazon",
+    "short_name": "amazon",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
