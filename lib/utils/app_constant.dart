@@ -9,8 +9,8 @@ class AppConstant {
 
   final serverUrl = "";
   // final apiUrl = "http://atlantis.bsa.qa/api";
-  final apiUrl = "https://www.amazon.com/api";
-  final url = "https://www.amazon.com/";
+  final apiUrl = "https://amazon-products1.p.rapidapi.com";
+  final url = "https://amazon-products1.p.rapidapi.com";
 
   final companyUrl = "";
 

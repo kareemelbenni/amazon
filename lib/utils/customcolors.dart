@@ -5,7 +5,7 @@ class customcolors {
   static const PrimaryGreen = Color(0xFF173f35);
   static const PrimaryGreen2 = Color(0xFF03D8BB);
   static const PrimaryPurple = Color(0xFFB42070);
-  static const PrimaryBlue = Color(0xFF34328F);
+  static const PrimaryBlue = Color(0xFF232f3e);
   static const PrimaryYellow = Color(0xFFE6BE06);
   // static const PrimaryGreen = Color(0xFF34328F);
   static const PrimaryBlue2 = Color(0xFF23ADF4);

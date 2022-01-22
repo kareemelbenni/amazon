@@ -41,7 +41,7 @@ dependencies:
   intl: ^0.17.0
   connectivity: ^3.0.6
   flutter_launcher_icons: ^0.9.2
-
+  font_awesome_flutter: ^9.2.0
   
 
   # The following adds the Cupertino Icons font to your application.

@@ -1,7 +1,12 @@
 import 'dart:async';
+import 'package:amazon/models/api_model/apis_model.dart';
+import 'package:amazon/transitions/fadeoutroute.dart';
+import 'package:amazon/views/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'getx_controllers/main_controller.dart';
 import 'utils/customcolors.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -24,7 +29,6 @@ class _SplashScreenState extends State<SplashScreen>
 
     // workaround for onLaunch: When the app is completely closed (not in the background) and opened directly from the push notification
 
-    // startTime();
     // rotationController = AnimationController(
     //     duration: const Duration(milliseconds: 3000), vsync: this);
   }
@@ -34,7 +38,18 @@ class _SplashScreenState extends State<SplashScreen>
     return new Timer(_duration, navigation);
   }
 
-  void navigation() async {}
+  final controller = Get.put(Controller());
+  void navigation() async {
+    APISModel().getproducts(context).then((value) {
+      controller.products = value;
+      Navigator.pushReplacement(
+        context,
+        FadeRoute(
+          page: HomeScreen(),
+        ),
+      );
+    });
+  }
 
   @override
   void dispose() {
@@ -44,7 +59,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: customcolors.PrimaryGreen,
+      backgroundColor: customcolors.PrimaryBlue,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -68,7 +83,10 @@ class _SplashScreenState extends State<SplashScreen>
 
   bool isEnglish = false;
   initialization() async {
-    setState(() {});
-    startTime();
+    // setState(() {});
+    await startTime();
+
+    // Navigator.push(
+    //           context, FadeRoute(page: HomeScreen()));
   }
 }
